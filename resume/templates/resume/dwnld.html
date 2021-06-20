@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2rem;
+        }
+        
+        small{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1rem;
+        }
+
+        .name{
+            font-size: 4rem;
+        }
+
+        .phone,.email{
+            color: rgb(21, 95, 233);
+        }
+
+    </style>
+    <title>{{ user_resume.name }}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="section adja section1">
+            <p>{{ user_resume.address }}</p>
+            <p class="phone">{{ user_resume.phone }}</p>
+            <p class="email">{{ user_resume.email }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section adja section2">
+            <h1 class="name">{{ user_resume.name }}</h1>
+            <p>{{ user_resume.description }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section section3">
+            <h1>Degree</h1>
+            <p>{{ user_resume.degree }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section section4">
+            <h1>Skills</h1>
+            <p>{{ user_resume.skills }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section section5">
+            <h1>Experience</h1>
+            <p>{{ user_resume.experience }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section section6">
+            <h1>Education</h1>
+            <h2>School</h2>
+            <p><b>12th: </b>{{ user_resume.twelveth_schooling }}</p>
+            <small>12th %: {{ user_resume.twelveth_score }}</small>
+            <p><b>10th: </b>{{ user_resume.tenth_schooling }}</p>
+            <small>10th %: {{ user_resume.tenth_score }}</small>
+            <h2>University</h2>
+            <p>{{ user_resume.university }}</p>
+            <small>SGPA: {{ user_resume.university_score }}</small>
+        </div>
+        <br><hr><br>
+        <div class="section section7">
+            <h1>Projects</h1>
+            <p>{{ user_resume.projects }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section section8">
+            <h1>Languages</h1>
+            <p>{{ user_resume.languages }}</p>
+        </div>
+        <br><hr><br>
+        <div class="section section9">
+            <h1>Awards</h1>
+            <p>{{ user_resume.awards }}</p>
+        </div>
+        <br><hr><br>
+    </div>
+</body>
+</html>

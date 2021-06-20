@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'resume/style.css' %}">
+    <title>ResBUILD</title>
+</head>
+<body>
+     <div class="container">
+        <div class="heading">
+            <h1>Welcome to ResBUILD</h1>
+         </div>
+         <form method="POST" action="/">
+            {% csrf_token %}
+             <div class="entry">
+                 <label for="name">Name:</label>
+                <input id="name" type="text" name="name">
+             </div>
+             <div class="entry">
+                <label for="description">Description:</label>
+                <input id="description" type="text" name="description">
+             </div>
+             <div class="entry">
+                 <label for="address">Address:</label>
+                <input id="address" type="text" name="address">
+             </div>
+             <div class="entry">
+                 <label for="phone">Phone:</label>
+                <input id="phone" type="text" name="phone">
+             </div>
+             <div class="entry">
+                 <label for="email">Email:</label>
+                <input id="email" type="text" name="email">
+             </div>
+             <div class="entry">
+                 <label for="degree">Degree:</label>
+                <input id="degree" type="text" name="degree">
+             </div>
+             <div class="entry">
+                 <label for="skills">Skills:</label>
+                <input id="skills" type="text" name="skills">
+             </div>
+             <div class="entry">
+                <label for="university">University:</label>
+               <input type="text" name="university" id="university">
+            </div>
+             <div class="entry">
+                 <label for="university_score">SGPA:</label>
+                <input type="text" name="university_score" id="university_score">
+             </div>
+             <div class="entry">
+                <label for="twelveth_schooling">School Name(12th):</label>
+               <input type="text" name="twelveth_schooling" id="twelveth_schooling">
+            </div>
+            <div class="entry">
+                <label for="twelveth_score">Percentage:</label>
+               <input type="text" name="twelveth_score" id="twelveth_score">
+            </div>
+             <div class="entry">
+                <label for="tenth_schooling">School Name(10th):</label>
+               <input type="text" name="tenth_schooling" id="tenth_schooling">
+            </div>
+            <div class="entry">
+                <label for="tenth_score">Percentage::</label>
+               <input type="text" name="tenth_score" id="tenth_score">
+            </div>
+             <div class="entry">
+                 <label for="experience">Experience</label>
+                 <textarea name="experience" id="experience" cols="30" rows="10"></textarea>
+             </div>
+             <div class="entry">
+                 <label for="projects">Projects</label>
+                <textarea name="projects" id="projects" cols="30" rows="10"></textarea>
+             </div>
+             <div class="entry">
+                 <label for="languages">Languages</label>
+                <input id="languages" type="text" name="languages">
+             </div>
+             <div class="entry">
+                 <label for="awards">Awards</label>
+                <textarea name="awards" id="awards" cols="30" rows="10"></textarea>
+             </div>
+             <button class="submit">Done</button>
+         </form>
+     </div>
+</body>
+</html>
